@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hbpu.zyxt.ss.mapper.ContentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.hbpu.zyxt.ss.entity.Content">
+        <id column="qid" property="qid" />
+        <result column="cid" property="cid" />
+        <result column="contentQuestion" property="contentQuestion" />
+        <result column="contentPic" property="contentPic" />
+        <result column="kindid" property="kindid" />
+        <result column="trueAnswer" property="trueAnswer" />
+        <result column="cA" property="cA" />
+        <result column="cB" property="cB" />
+        <result column="cC" property="cC" />
+        <result column="cD" property="cD" />
+        <result column="cTxt" property="cTxt" />
+    </resultMap>
+
+</mapper>

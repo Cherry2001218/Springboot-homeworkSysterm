@@ -1,0 +1,57 @@
+web:
+  uploadPath: F:/TU/
+
+
+spring:
+  mail:
+    host: smtp.qq.com
+    username: 1196871415@qq.com
+    password: sfnujbhnbjjvhaie
+    protocol: smtp
+    default-encoding: UTF-8
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/stumongodb
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 500
+        min-idle: 0
+    lettuce:
+      shutdown-timeout: 0ms
+  servlet:
+    multipart:
+      max-file-size:
+        10MB
+      max-request-size:
+        20MB
+  mvc:
+    static-path-pattern: /pic/**
+  web:
+     resources:
+       static-locations: file:${web.uploadPath}
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/studb
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: news-group
+    send-message-timeout: 3000
